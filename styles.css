@@ -11,6 +11,16 @@ header {
     padding: 20px;
     text-align: center;
     background-image: url('assets/sample.jpg');
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 nav a {
@@ -29,6 +39,7 @@ nav a {
 
 .column {
     padding: 20px; /* Añade espacio alrededor de cada columna */
+    
 }
 
 
@@ -62,4 +73,27 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+
+/* CSS for screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav {
+        flex-wrap: nowrap;
+    }
+
+    .column {
+        width: 100%;
+        float: none;
+    }
+
+    .description {
+        grid-template-columns: 1fr;
+    }
 }
